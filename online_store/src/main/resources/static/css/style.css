@@ -1,0 +1,43 @@
+html {
+    top: 0;
+    bottom:0;
+  
+    overflow-x:hidden;
+}
+body{
+    background-color:white;
+    margin: 25rem;
+    text-align: center;
+}
+.h2{
+    color: deeppink;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+    align-items: center;
+}
+table {
+    width: 50rem;
+}
+th {
+    text-align: start;
+    width: 90px;
+    height: 40px;
+    font-weight:bold;
+    background-color: beige;
+}
+td{
+    text-align: start;
+}
+.logo{
+    width: 90px;
+    height: 90px;
+
+}
+.header {
+    text-align: center;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymleaf.org">
+
+<head>
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <title>Book Store</title>
+         <script src="https://kit.fontawesome.com/0faddc1af8.js" crossorigin="anonymous"></script>
+         <th:block th:insert="fragments/header.html :: bootstrap" /> 
+      </head>
+</head>
+
+<body>
+    <th:block th:insert="fragments/header.html :: header(' ')" /> 
+
+    <div class="container my-5 col-md-8">
+        
+        <a th:href="${ '/categories/add'}"><i class="fa-solid fa-file-circle-plus ms-4"></i>Add Category</a>
+        <table class="table  table-striped table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr th:each="category :${categories}">
+                <td th:text="${category.id}"></td>
+                <td th:text="${category.name}"></td>
+                <td>
+                  <a style="color:blue" th:href="${'/categories/edit/' + category.id}"><i
+                      class="fa-solid fa-pen-to-square ms-4"></i></a>
+                  <a style="color:red" th:href="${'/categories/delete/' + category.id}"><i class="fa-solid fa-trash ms-4"></i></a>
+                </td>
+      
+              </tr>
+      
+            </tbody>
+          </table>
+        <!-- <table class="table  table-striped table-hover">
+            <tr>
+                <th scope="col">Name</th>
+
+                <th scope="col">View</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+            </tr>
+            <tr th:each="category :${categories}">
+                <td th:text="${category.name}"></td>
+                <td><a th:href="${ '/categories/' + category.id}">View</a></td>
+                <td><a th:href="${'/categories/edit/' + category.id}">Edit</a></td>
+                <td><a th:href="${'/categories/delete/' + category.id}">Delete</a></td>
+
+            </tr>
+        </table> -->
+    </div>
+</body>
+
+</html>

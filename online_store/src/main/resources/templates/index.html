@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Online Store</title>
+    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <th:block th:insert="fragments/header.html :: bootstrap" /> 
+</head>
+
+<body class="container">
+
+   <th:block th:insert="fragments/header.html :: header('Welcome to your product storage')" /> 
+   
+    <!-- Hover added -->
+    <div class="list-group mt-4">
+        <a href="/products/" class="list-group-item list-group-item-action">View products</a>
+        <a href="/categories/" class="list-group-item list-group-item-action">View categories</a>
+    </div>
+    
+    
+
+  
+</body>
+
+</html>

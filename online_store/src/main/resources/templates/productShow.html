@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Person List</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+    </head>
+    <body>
+        
+     
+        <div class="header">       
+        </div>
+        <h2>Product Details</h2>
+        <div>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Code: </label>
+                    <font color="red" class="form-control-static" th:text="${products.code}">Code</font>
+                </div>
+              
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Name:</label>
+                    <font color="red" class="form-control-static" th:text="${products.name}">name</font>
+                    
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Price:</label>
+                    <font color="red" class="form-control-static" th:text="${products.price}">Price</font>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Quantity:</label>
+                    <font color="red" class="form-control-static" th:text="${products.quantity}">Quantity</font>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Category:</label>
+                    <font color="red" class="form-control-static" th:text="${products.category.name}">Quantity</font>
+                </div>
+                
+                                
+
+            
+            </form>
+    </div>
+       
+    </body>
+
+</html>
